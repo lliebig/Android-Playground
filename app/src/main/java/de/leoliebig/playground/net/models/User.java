@@ -1,13 +1,15 @@
-package de.leoliebig.playground.models;
+package de.leoliebig.playground.net.models;
 
 import java.net.URL;
 
-import de.leoliebig.playground.mvp.userprofile.UserProfileMvp;
+import de.leoliebig.playground.patterns.mvp.userprofile.UserProfileMvp;
 
 /**
  * Data bag for user data
+ * TODO
+ * - add JSON annotations
  */
-public class User implements UserProfileMvp.Model{
+public class User implements UserProfileMvp.Model {
 
     public static final int NO_ID = -1;
 

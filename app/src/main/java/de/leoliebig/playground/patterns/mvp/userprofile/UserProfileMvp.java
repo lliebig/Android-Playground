@@ -1,4 +1,4 @@
-package de.leoliebig.playground.mvp.userprofile;
+package de.leoliebig.playground.patterns.mvp.userprofile;
 
 import android.graphics.Bitmap;
 
@@ -10,15 +10,19 @@ import java.net.URL;
 
 public abstract class UserProfileMvp {
 
-    public interface View{
+    public interface View {
 
         void showUserInformation(String firstName, String lastName, String biography);
 
         void showUserAvatar(Bitmap avatar);
 
+        void showLoading();
+
+        void showError(String message);
+
     }
 
-    public interface Model{
+    public interface Model {
 
         String getFirstName();
 

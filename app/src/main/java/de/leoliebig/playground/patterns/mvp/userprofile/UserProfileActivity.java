@@ -1,4 +1,4 @@
-package de.leoliebig.playground.mvp.userprofile;
+package de.leoliebig.playground.patterns.mvp.userprofile;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -56,8 +56,18 @@ public class UserProfileActivity extends AppCompatActivity implements UserProfil
     @Override
     public void showUserAvatar(Bitmap avatar) {
 
-        if(avatar!=null)
+        if (avatar != null)
             imgAvatar.setImageBitmap(avatar);
+    }
+
+    @Override
+    public void showLoading() {
+
+    }
+
+    @Override
+    public void showError(String message) {
+
     }
 
     private void findViews() {

@@ -15,7 +15,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".mvp.userprofile.UserProfileActivity"></activity>
+        <activity android:name=".patterns.mvp.userprofile.UserProfileActivity"></activity>
     </application>
 
 </manifest>

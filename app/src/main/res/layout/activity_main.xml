@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/spacing_m"
+    android:paddingLeft="@dimen/spacing_m"
+    android:paddingRight="@dimen/spacing_m"
+    android:paddingTop="@dimen/spacing_m"
     tools:context="de.leoliebig.playground.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        android:layout_marginBottom="@dimen/spacing_m"
+        android:drawableLeft="@mipmap/ic_launcher"
+        android:drawablePadding="@dimen/spacing_s"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Android Playground"
+        android:textSize="@dimen/text_size_xl" />
+
+    <Button
+        android:id="@+id/btnUserProfileMvvm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="User profile MVVM" />
+
+    <Button
+        android:id="@+id/btnUserProfileMvp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="User profile MVP" />
+
+</LinearLayout>
