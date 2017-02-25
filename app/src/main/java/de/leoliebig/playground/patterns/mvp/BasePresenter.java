@@ -12,7 +12,7 @@ public abstract class BasePresenter {
 
     public abstract void onViewDetach(Bundle state);
 
-    public static boolean isViewAttached(WeakReference viewReference) {
+    public static boolean isViewAttached(final WeakReference viewReference) {
 
         return (viewReference != null && viewReference.get() != null);
 

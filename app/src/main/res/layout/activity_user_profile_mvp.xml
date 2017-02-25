@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_user_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".patterns.mvp.userprofile.UserProfileActivityMvp">
+
+    <LinearLayout
+        android:id="@+id/containerLoadingIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ProgressBar
+            android:id="@+id/pbLoading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_s" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loading_user_profile" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/containerProfile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/imgAvatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:minHeight="80dp"
+            android:minWidth="80dp"
+            tools:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tvFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imgAvatar"
+            android:layout_marginLeft="@dimen/spacing_m"
+            android:layout_toRightOf="@+id/imgAvatar"
+            android:textSize="@dimen/text_size_xl"
+            tools:text="Dudinski" />
+
+        <TextView
+            android:id="@+id/tvLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvFirstName"
+            android:layout_marginLeft="@dimen/spacing_m"
+            android:layout_toRightOf="@+id/imgAvatar"
+            android:textSize="@dimen/text_size_l"
+            tools:text="Dudikov" />
+
+        <TextView
+            android:id="@+id/tvBiography"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvLastName"
+            android:layout_marginLeft="@dimen/spacing_m"
+            android:layout_marginTop="@dimen/spacing_m"
+            android:layout_toRightOf="@id/imgAvatar"
+            android:textSize="@dimen/text_size_m"
+            tools:text="Awesome name, awesome life. One of the best, the very best!" />
+
+        <Button
+            android:id="@+id/btnShowNextUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:onClick="onClick"
+            android:text="@string/btn_show_next_user" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

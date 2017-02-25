@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Android Playground</string>
+
+    <!-- Patterns: MVVM / MVP -->
+    <string name="loading_user_profile">Loading user profile...</string>
+    <string name="btn_show_next_user">Show random user</string>
+
+    <string name="bio_fake_text">
+        Gag ipsum dolar sit amet phone left derp y u no jackie chan. Ipsum angry birds meme strangers derpina simpson men charlie sheen le me grin.
+        Morbi top face grey homework diablo 3 cool no male freddie mercury. Le friend mother t-rex bra drink cereal all the things crying back high school pizza good guy.
+        Troll rebecca black food feel like a sir dad unsave you don\'t say? Sit yao geek 140\% on humor coffee gag woman. Oboma basic math close enough thor avenger
+        lol i\'m watching u hulk bottom right hammer. Admire like a boss monday hac donut not okay on movies not bad. Always female avengers fun okay wodka just
+        bart poker face. Iron man laptop trolololo father bacon cuteness overload students loki.Derpina monocle vegan father hac puking rainbows rainbow house no bad
+        viverra so close. Cool okay search joke pokeman if you know what i mean i dont get it face pizza steve jobs scumbag. Ba Dumm Tss monday party why tank mom all
+        the things bottom men. Crying grin clinton oh stop it, you feel like a sir venenatis dead homer. Happy top male amnesia unsave blizzard drink right eat.
+        Always final week admire y u no portfolio computer money michelle. Donut geek facepalm oboma brother le me wodka derp unlock. Rebecca Black cellphone creepy
+        me gusta homework easter woman laptop trolololo in class. Panda architect asian pikachu students too mainstream phone captain. German coffee collection genius.
+    </string>
+
+
 </resources>
