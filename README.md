@@ -1,10 +1,10 @@
 # Android-Playground
-Playground for experimenting with new Android APIs and fancy libraries. Nothing especially interesting to see here. :)
+Playground for experimenting with new Android APIs, design patterns and fancy libraries. Nothing especially interesting to see here. :)
 
 Patterns
 - MVP
 
-Technology
+Libraries
 - Retrofit
 - Glide
 - Jackson
