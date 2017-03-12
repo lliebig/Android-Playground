@@ -16,7 +16,7 @@ import de.leoliebig.playground.data.net.models.User;
 import de.leoliebig.playground.patterns.mvp.BasePresenter;
 
 /**
- * Implements the business logic for loading and displaying user profiles.
+ * Implements the view and business logic for loading and displaying user profiles.
  * <p>
  * Created by Leo on 02.07.2016.
  */
@@ -31,7 +31,7 @@ public class UserProfilePresenter extends BasePresenter implements DataSource.Lo
     private int userId;
     private DataSource<User> userService;
 
-    private UserProfileMvp.Model profile;
+    private UserProfileMvp.Model userProfile;
 
     /**
      * Creates a new instances tied to the passed {@link UserProfileMvp.View} and {@link DataSource}.
@@ -60,7 +60,7 @@ public class UserProfilePresenter extends BasePresenter implements DataSource.Lo
     @Override
     public void present() {
 
-        if (profile == null) {
+        if (userProfile == null) {
             loadData();
             return;
         }
@@ -84,7 +84,7 @@ public class UserProfilePresenter extends BasePresenter implements DataSource.Lo
         }
 
         this.userId = userId;
-        profile = null;
+        userProfile = null;
 
         loadData();
 
@@ -96,9 +96,9 @@ public class UserProfilePresenter extends BasePresenter implements DataSource.Lo
             return;
 
         view.get().showUserInformation(
-                profile.getFirstName(),
-                profile.getLastName(),
-                profile.getBiography()
+                userProfile.getFirstName(),
+                userProfile.getLastName(),
+                userProfile.getBiography()
         );
 
         loadAvatar();
@@ -116,7 +116,7 @@ public class UserProfilePresenter extends BasePresenter implements DataSource.Lo
         ImageView imgAvatar = view.get().getAvatarView();
 
         Glide.with(imgAvatar.getContext())
-                .load(profile.getAvatarUrl().toString())
+                .load(userProfile.getAvatarUrl().toString())
                 .centerCrop()
                 .crossFade()
                 .into(imgAvatar);
@@ -133,16 +133,17 @@ public class UserProfilePresenter extends BasePresenter implements DataSource.Lo
     }
 
     @Override
-    public void onLoaded(long id, User data, int code) {
-        if (code == 200) {
-            profile = data;
+    public void onLoaded(long id, User data, int resultCode) {
+        //TODO add abstraction for result codes and encapsulate the data source
+        if (resultCode == 200) {
+            userProfile = data;
             updateView();
             loadAvatar();
         } else {
-            Log.e(TAG, "loadData: " + code);
+            Log.e(TAG, "loadData: " + resultCode);
 
             if (isViewAttached(view)) {
-                view.get().showError("Error loading user " + id + ": " + code);
+                view.get().showError("Error loading user " + id + ": " + resultCode);
             }
         }
     }

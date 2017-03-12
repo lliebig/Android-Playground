@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import de.leoliebig.playground.patterns.mvp.userprofile.UserProfileActivityMvp;
+import de.leoliebig.playground.patterns.mvvm.userprofile.UserProfileActivityMvvm;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -23,10 +24,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this, UserProfileActivityMvp.class));
                 break;
             case R.id.btnUserProfileMvvm:
-                Toast.makeText(this, "Not implemented yet", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, UserProfileActivityMvvm.class));
                 break;
             default:
-                throw new AssertionError("Unexpeted click from view: " + view);
+                throw new AssertionError("Unexpected click from view: " + view);
         }
     }
 }

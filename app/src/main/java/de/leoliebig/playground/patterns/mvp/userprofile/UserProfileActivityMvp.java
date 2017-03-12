@@ -62,9 +62,6 @@ public class UserProfileActivityMvp extends AppCompatActivity implements UserPro
         tvLastName.setText(lastName);
         tvBiography.setText(biography);
 
-        if (tvBiography.getText().length() == 0)
-            tvBiography.setText(R.string.bio_fake_text);
-
     }
 
     @Override
