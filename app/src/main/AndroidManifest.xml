@@ -19,6 +19,10 @@
         </activity>
         <activity android:name=".patterns.mvp.userprofile.UserProfileActivityMvp" />
         <activity android:name=".patterns.mvvm.userprofile.UserProfileActivityMvvm" />
+        <activity
+            android:name=".RealmActivity"
+            android:label="@string/title_activity_realm"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -16,5 +16,6 @@
     <dimen name="text_size_m">12sp</dimen>
     <dimen name="text_size_l">16sp</dimen>
     <dimen name="text_size_xl">24sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 
 </resources>

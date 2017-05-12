@@ -36,4 +36,18 @@
         android:onClick="onClick"
         android:text="User profile MVP" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="@dimen/spacing_s"
+        android:layout_marginTop="@dimen/spacing_s"
+        android:background="@color/gray" />
+
+    <Button
+        android:id="@+id/btnRealm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="Realm" />
+
 </LinearLayout>
